@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>kuis</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="conteiner">
+      <div class="question" id="question">
+      
+      </div>
+
+      <div class="answer" id="answer">
+
+         <div class="choice" id="choice-a">
+          
+         </div>
+         <div class="choice" id="choice-b"> </div>
+         <div class="choice" id="choice-c"> </div>
+
+      </div>
+   </div>
+   
+
+   <script>
+      let question1={
+   satu:"Apa itu JSON di JavaScript?"
+}
+
+let answerChoice1={
+   a : "A. Format pertukaran data yang ringan dan mudah dibaca dan ditulis oleh manusia. ",
+   b : "B. Bahasa pemrograman untuk membuat website.",
+   c : "C.   Representasi struktur halaman web yang dapat dimanipulasi dengan JavaScript.",
+}
+
+
+
+let answer =document.getElementById('answer')
+let question =document.getElementById('question')
+let choicea = document.getElementById('choice-a')
+let choiceb = document.getElementById('choice-b')
+let choicec = document.getElementById('choice-c')
+let btn = document.getElementById('answerbtn')
+let nextpage = "index7.html"
+question.innerHTML=(question1.satu)
+
+choicea.innerHTML=(answerChoice1.a)
+choiceb.innerHTML=(answerChoice1.b)
+choicec.innerHTML=(answerChoice1.c)
+choicea.addEventListener('click', function(){
+   alert('benar')
+   window.location= nextpage;
+})
+
+choiceb.addEventListener('click', function(){
+   alert('salah')
+})
+choicec.addEventListener('click', function(){
+   alert('salah')
+})
+
+   </script>
+</body>
+</html>
