@@ -10,6 +10,7 @@
 <body>
 
    <div class="conteiner">
+      <div class="skor" id="skor"> </div>
       <div class="question" id="question">
       
       </div>
@@ -45,8 +46,14 @@ let choicea = document.getElementById('choice-a')
 let choiceb = document.getElementById('choice-b')
 let choicec = document.getElementById('choice-c')
 let btn = document.getElementById('answerbtn')
+let skor= document.getElementById('skor')
 let nextpage = "index2.html"
+
 question.innerHTML=(question1.satu)
+let skorawal= 0
+
+skor.innerHTML=(skorawal)
+
 
 choicea.innerHTML=(answerChoice1.a)
 choiceb.innerHTML=(answerChoice1.b)
@@ -61,6 +68,9 @@ choiceb.addEventListener('click', function(){
 choicec.addEventListener('click', function(){
    alert('benar')
    window.location= nextpage;
+   skorawal++
+   skor.innerHTML=(skorawal)
+   localStorage.setItem("skor", skorawal)
 })
 
    </script>
